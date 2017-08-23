@@ -1,0 +1,82 @@
+﻿#msform {
+    width: 600px;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+}
+
+#msform fieldset {
+    /*background: slategray;*/
+    border: 1px black;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 10%;
+}
+
+
+.prog-bar {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 4;
+}
+
+.prog-bar-wrap {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    left: 0;
+}
+
+.prog-bar-top, .prog-bar-bottom {
+    height: 40px;
+    -ms-overflow-style: none;
+    -ms-scroll-chaining: none;
+    -ms-scroll-snap-type: mandatory;
+    -ms-scroll-snap-points-x: snapInterval(0%,100%);
+}
+
+.prog-bar-t2 .prog-bar-top .prog-bar-step.prog-bar-active:after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background: transparent;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    margin-left: -12px;
+    border: 12px solid black;
+    border-color: transparent #14b5c8 #14b5c8 transparent;
+    z-index: -1;
+}
+
+.prog-bar li {
+    float: left;
+    position: relative;
+    margin-right: 10px;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+@media (max-width: 600px) {
+    #msform {
+        width: 100%;
+    }
+
+    #msform fieldset {
+        width: 98%;
+        margin: 0;
+    }
+
+    
+}

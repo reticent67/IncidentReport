@@ -1,0 +1,77 @@
+﻿<form [formGroup]="formShell" (ngSubmit)="save(formShell)">
+    <h4 class="text-center">{{title}}</h4>
+    <br />
+    <!-- Begin People Array -->
+    <div formArrayName="people">
+        <div *ngFor="let person of formShell.controls.people.controls; let i=index" class="panel panel-default">
+            <div class="panel-heading">
+                <span>Person {{i + 1}}</span>
+                <span class="glyphicon glyphicon-remove pull-right" *ngIf="formShell.controls.people.controls.length > 1" (click)="removePerson(i)">
+                </span>
+            </div>
+            <!-- Angular assigns array index as group name by default 0, 1, 2, ... -->
+            <div [formGroupName]="i" class="panel-body">
+                <div class="row">
+                    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8">
+                        <div class="col-xs-12 col-md-4">
+                            <div class="form-group">
+                                <label class="control-label" for="lastName">Last Name</label>
+                                <input class="form-control" type="text" formControlName="lastName">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="form-group">
+                                <label class="control-label" for="firstName">First Name</label>
+                                <input class="form-control" type="text" formControlName="firstName">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="form-group">
+                                <label class="control-label" for="middleName">Middle Name</label>
+                                <input class="form-control" type="text" formControlName="middleName">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Begin Address Array -->
+               <div formArrayName="addresses">
+                        <div *ngFor="let address of person.controls.addresses.controls; let j=index" class="panel panel-info">
+                            <div class="panel-heading">
+                                <span>Address {{j + 1}}</span>
+                                <span class="glyphicon glyphicon-remove pull-right" *ngIf="person.controls.addresses.controls.length > 1" (click)="removeAddress(person, j)"></span>
+                            </div>
+                            <div class="panel-body" [formGroupName]="j">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label class="control-label" for="street">Street</label>
+                                        <input class="form-control" type="text" formControlName="street">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="margin-20">
+                        <button (click)="addAddress(person)" class="btn btn-primary">
+                            Add another Address +
+                        </button>
+                    </div>
+                </div>
+                <!-- End Address Array -->
+            </div>
+        </div>
+       
+    <!-- End People Array-->
+    <div class="margin-20">
+        <button (click)="addPerson()" class="btn btn-primary">
+            Add another person +
+        </button>
+    </div>
+    <!-- Submit Button-->
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8">
+            <div class="form-group text-center">
+                <button class="btn btn-success btn-info" type="submit"> Next <span style="margin-left: 10px;" class="glyphicon glyphicon-arrow-right"></span></button>
+            </div>
+        </div>
+    </div>
+</form>

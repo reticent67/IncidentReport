@@ -1,0 +1,24 @@
+﻿<form [formGroup]="detailsForm" (ngSubmit)="save(detailsForm)">
+    
+  
+        <div class="tab-pane fade in active">
+            <h4 class="text-center">{{title}}</h4>
+            <br />
+
+            <ul>
+                <li>Report Title</li>
+                <li>Incident Number</li>
+                <li>Date/Time start</li>
+                <li>Date/Time End</li>
+                <li>Location</li>
+            </ul>
+        </div>
+
+
+
+        <div class="form-group text-center">
+            <button [routerLinkActive]="['link-active']" [routerLink]="['../createIR-people']" class="btn btn-success btn-warning" type-="submit"> Next <span style="margin-left: 10px;" class="glyphicon-arrow-right"></span></button>
+        </div>
+   
+</form>
+

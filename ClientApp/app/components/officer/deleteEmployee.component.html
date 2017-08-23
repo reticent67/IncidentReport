@@ -1,0 +1,29 @@
+﻿<h2>Delete Officer</h2>
+
+<strong class="text-danger">Are you sure you want to delete this employee?</strong>
+
+<div class="row">
+    <div class="col-md-3"><b>Serial</b></div><div class="col-md-3">{{EmployeeDetails.serial}}</div>
+</div>
+<div class="row">
+    <div class="col-md-3"><b>Last Name</b></div><div class="col-md-3">{{EmployeeDetails.lastName}}</div>
+</div>
+
+<div class="row">
+    <div class="col-md-3"><b>First Name</b></div><div class="col-md-3">{{EmployeeDetails.firstName}}</div>
+</div>
+<div class="row">
+    <div class="col-md-3"><b>Division</b></div><div class="col-md-3">{{EmployeeDetails.division}}</div>
+</div>
+<div class="row">
+    <div class="col-md-3"><b>Assignment</b></div><div class="col-md-3">{{EmployeeDetails.assignment}}</div>
+</div>
+<br>
+
+<div class="form-group">
+    <a   
+        class="btn btn-danger" (click)="deleteEmployee(EmployeeDetails.officerID)">  
+        Delete  
+    </a>   
+</div>
+
