@@ -1,5 +1,5 @@
 ﻿import { Component, OnInit } from '@angular/core';
-import { ReportService } from '../../services/reportService';
+import { ReportService } from '../../services/ReportService';
 import { ReportPerson, PersonAddress } from '../../models/reportForm.model';
 import { Validators, FormGroup, FormArray, FormBuilder } from '@angular/forms';
 

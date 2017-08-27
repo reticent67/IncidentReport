@@ -23,6 +23,7 @@ import { CreateIRMenuComponent } from './components/createIR/createIR-menu.compo
 
 //Services
 import { OfficerService } from './services/OfficerService';
+import { ReportService } from './services/ReportService';
 
 
 
@@ -48,7 +49,8 @@ export const sharedConfig: NgModule = {
         
     ],
     providers : [
-        OfficerService
+        OfficerService,
+        ReportService
     ],
 
     imports : [

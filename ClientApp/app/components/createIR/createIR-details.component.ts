@@ -1,10 +1,9 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import { ReportService } from '../../services/reportService';
+import { ReportService } from '../../services/ReportService';
 import { ReportDetails} from '../../models/reportForm.model';
 
-@
-Component({
+@Component({
     selector: 'report-details',
     templateUrl: './createIR-details.component.html',
     styleUrls: ['./createIR.css']

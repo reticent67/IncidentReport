@@ -1,9 +1,8 @@
 ﻿import { Component, OnInit, Input } from '@angular/core';
-import { ReportService } from '../../services/reportService';
+import { ReportService } from '../../services/ReportService';
 
 
-@
-Component({
+@Component({
     selector: 'createIR-app',
     templateUrl: './createIR-app.component.html',
     styleUrls:['./createIR.css'],
