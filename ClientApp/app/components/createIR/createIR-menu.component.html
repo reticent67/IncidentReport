@@ -1,13 +1,22 @@
 ﻿<div class="menu-wrap">
     <ul class="app-menu">
-        <li class="menu-item"><span class="item-number">1</span>
-            <div class="menu-text">Item 1</div>
+        <li class="menu-item" [routerLinkActive]="['link-active']" >
+            <a [routerLink]="['./createIR-details']">
+                <span class="item-number">1</span>
+                <div class="menu-text">Details</div>
+            </a>
         </li>
-        <li class="menu-item"><span class="item-number">2</span>
-            <div class="menu-text">Item 1</div>
+        <li class="menu-item" [routerLinkActive]="['link-active']" >
+           <a [routerLink]="['./createIR-people']">
+                <span class="item-number">2</span>
+                <div class="menu-text">People</div>
+           </a>
         </li>
-        <li class="menu-item"><span class="item-number">3</span>
-            <div class="menu-text">Item 1</div>
+        <li class="menu-item" [routerLinkActive]="['link-active']" >
+            <a [routerLink]="['./createIR-car']">
+                <span class="item-number">3</span>
+                <div class="menu-text">Item 3</div>
+            </a>
         </li>
     </ul>
 </div>

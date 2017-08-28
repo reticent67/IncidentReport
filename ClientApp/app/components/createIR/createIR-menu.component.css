@@ -1,4 +1,7 @@
 ﻿
+a {
+    text-decoration: none;
+}
   .menu-wrap {
       position: relative;
       margin-bottom: 6px;
@@ -45,11 +48,12 @@
       background: #14b5c8;
   }
   
-  .menu-item:active {
+  .menu-item.link-active {
       margin-top: 6px;
+      background: #14b5c8;
   }
   
-  .menu-item:active::after {
+  .menu-item.link-active::after {
       content: "";
       width: 5px;
       height: 5px;
